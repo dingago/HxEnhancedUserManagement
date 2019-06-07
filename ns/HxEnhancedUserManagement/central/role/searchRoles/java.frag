@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">searchRoles</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">SURhdGFNYXAgcGlwZWxpbmVNYXAgPSBuZXcgSURhdGFNYXAocGlwZWxpbmUpOw0KU3RyaW5nIHNl
+YXJjaFN0cmluZyA9IHBpcGVsaW5lTWFwLmdldEFzU3RyaW5nKCJzZWFyY2hTdHJpbmciKTsNCg0K
+TGlzdDxTdHJpbmc+IHJvbGVOYW1lcyA9IG5ldyBBcnJheUxpc3Q8U3RyaW5nPigpOw0KDQpJRGly
+ZWN0b3J5U2Vzc2lvbiBzZXNzaW9uID0gQ0RTVXNlck1hbmFnZXIuZ2V0U2Vzc2lvbigpOw0KZm9y
+IChJRGlyZWN0b3J5Um9sZSByb2xlIDogc2Vzc2lvbi5saXN0Um9sZXMoKSl7DQoJaWYgKHNlYXJj
+aFN0cmluZyA9PSBudWxsIHx8IHJvbGUuZ2V0TmFtZSgpLnRvVXBwZXJDYXNlKCkuaW5kZXhPZihz
+ZWFyY2hTdHJpbmcudG9VcHBlckNhc2UoKSkgPj0gMCl7DQoJCXJvbGVOYW1lcy5hZGQocm9sZS5n
+ZXROYW1lKCkpOw0KCX0NCn0JCQ0KcGlwZWxpbmVNYXAucHV0KCJyb2xlTmFtZXMiLCByb2xlTmFt
+ZXMudG9BcnJheShuZXcgU3RyaW5nW3JvbGVOYW1lcy5zaXplKCldKSk7</value>
+</Values>

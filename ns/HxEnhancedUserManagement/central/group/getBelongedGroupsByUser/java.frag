@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">getBelongedGroupsByUser</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">SURhdGFNYXAgcGlwZWxpbmVNYXAgPSBuZXcgSURhdGFNYXAocGlwZWxpbmUpOw0KU3RyaW5nIHVz
+ZXJuYW1lID0gcGlwZWxpbmVNYXAuZ2V0QXNTdHJpbmcoInVzZXJuYW1lIik7DQoNCklEaXJlY3Rv
+cnlTZXNzaW9uIHNlc3Npb24gPSBDRFNVc2VyTWFuYWdlci5nZXRTZXNzaW9uKCk7DQpJRGlyZWN0
+b3J5UHJpbmNpcGFsIHByaW5jaXBhbCA9IHNlc3Npb24ubG9va3VwUHJpbmNpcGFsQnlOYW1lKHVz
+ZXJuYW1lLCBJRGlyZWN0b3J5UHJpbmNpcGFsLlRZUEVfVVNFUiApOw0KDQppZiAocHJpbmNpcGFs
+ICE9IG51bGwpew0KCUxpc3Q8SURpcmVjdG9yeUdyb3VwPiBncm91cHMgPSBzZXNzaW9uLmdldEdy
+b3VwTWVtYmVyc2hpcChwcmluY2lwYWwuZ2V0SUQoKSk7DQoJU3RyaW5nW10gZ3JvdXBOYW1lcyA9
+IG5ldyBTdHJpbmdbZ3JvdXBzLnNpemUoKV07DQoJZm9yIChpbnQgaSA9IDA7IGkgPCBncm91cE5h
+bWVzLmxlbmd0aDsgaSsrKXsNCgkJZ3JvdXBOYW1lc1tpXSA9IGdyb3Vwcy5nZXQoaSkuZ2V0TmFt
+ZSgpOw0KCX0NCglwaXBlbGluZU1hcC5wdXQoImdyb3VwTmFtZXMiLCBncm91cE5hbWVzKTsNCn0N
+Cgk=</value>
+</Values>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">getBelongedRolesByGroup</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">SURhdGFNYXAgcGlwZWxpbmVNYXAgPSBuZXcgSURhdGFNYXAocGlwZWxpbmUpOw0KU3RyaW5nIGdy
+b3VwTmFtZSA9IHBpcGVsaW5lTWFwLmdldEFzU3RyaW5nKCJncm91cE5hbWUiKTsNCg0KSURpcmVj
+dG9yeVNlc3Npb24gc2Vzc2lvbiA9IENEU1VzZXJNYW5hZ2VyLmdldFNlc3Npb24oKTsNCklEaXJl
+Y3RvcnlQcmluY2lwYWwgcHJpbmNpcGFsID0gc2Vzc2lvbi5sb29rdXBQcmluY2lwYWxCeU5hbWUo
+Z3JvdXBOYW1lLCBJRGlyZWN0b3J5UHJpbmNpcGFsLlRZUEVfR1JPVVAgKTsNCg0KaWYgKHByaW5j
+aXBhbCAhPSBudWxsKXsNCglMaXN0PElEaXJlY3RvcnlSb2xlPiByb2xlcyA9IHNlc3Npb24uZ2V0
+Um9sZU1lbWJlcnNoaXAocHJpbmNpcGFsLmdldElEKCkpOw0KCVN0cmluZ1tdIHJvbGVOYW1lcyA9
+IG5ldyBTdHJpbmdbcm9sZXMuc2l6ZSgpXTsNCglmb3IgKGludCBpID0gMDsgaSA8IHJvbGVOYW1l
+cy5sZW5ndGg7IGkrKyl7DQoJCXJvbGVOYW1lc1tpXSA9IHJvbGVzLmdldChpKS5nZXROYW1lKCk7
+DQoJfQ0KCXBpcGVsaW5lTWFwLnB1dCgicm9sZU5hbWVzIiwgcm9sZU5hbWVzKTsNCn0NCgk=</value>
+</Values>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">updatePassword</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">SURhdGFNYXAgcGlwZWxpbmVNYXAgPSBuZXcgSURhdGFNYXAocGlwZWxpbmUpOw0KU3RyaW5nIHVz
+ZXJuYW1lID0gcGlwZWxpbmVNYXAuZ2V0QXNTdHJpbmcoInVzZXJuYW1lIik7DQpTdHJpbmcgcGFz
+c3dvcmQgPSBwaXBlbGluZU1hcC5nZXRBc1N0cmluZygicGFzc3dvcmQiKTsNCg0KSURpcmVjdG9y
+eVNlc3Npb24gc2Vzc2lvbiA9IENEU1VzZXJNYW5hZ2VyLmdldFNlc3Npb24oKTsNCklEaXJlY3Rv
+cnlQcmluY2lwYWwgcHJpbmNpcGFsID0gc2Vzc2lvbi5sb29rdXBQcmluY2lwYWxCeU5hbWUodXNl
+cm5hbWUsIElEaXJlY3RvcnlQcmluY2lwYWwuVFlQRV9VU0VSICk7DQppZiAocHJpbmNpcGFsICE9
+IG51bGwpew0KICAgIE1hcCBhdHRyaWJ1dGVzID0gcHJpbmNpcGFsLmdldEFsbEF0dHJpYnV0ZXMo
+KTsNCiAgICBhdHRyaWJ1dGVzLnB1dCgicGFzc3dvcmQiLCBwYXNzd29yZCk7DQogICAgc2Vzc2lv
+bi5tb2RpZnlQcmluY2lwYWwocHJpbmNpcGFsLmdldElEKCksIGF0dHJpYnV0ZXMpOw0KfWVsc2V7
+DQoJdGhyb3cgbmV3IFNlcnZpY2VFeGNlcHRpb24oIk5vdCBmb3VuZCB1c2VyICIgKyB1c2VybmFt
+ZSk7DQp9</value>
+</Values>
