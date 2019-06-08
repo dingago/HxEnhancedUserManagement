@@ -1,8 +1,8 @@
 package HxEnhancedUserManagement.central;
 
 // -----( IS Java Code Template v1.2
-// -----( CREATED: 2019-06-07 10:43:09 MDT
-// -----( ON-HOST: 192.168.241.213
+// -----( CREATED: 2019-06-08 09:31:44 MDT
+// -----( ON-HOST: 192.168.241.179
 
 import com.wm.data.*;
 import com.wm.util.Values;
@@ -370,23 +370,44 @@ public final class group
 		// --- <<IS-START(searchGroups)>> ---
 		// @sigtype java 3.5
 		// [i] field:0:required searchString
-		// [o] field:1:required groupNames
+		// [i] field:0:optional directoryServiceId
+		// [o] record:1:required groups
+		// [o] - field:0:required name
+		// [o] - field:0:required directoryServiceId
 		IDataMap pipelineMap = new IDataMap(pipeline);
 		String searchString = pipelineMap.getAsString("searchString");
+		String directoryServiceId = pipelineMap.getAsString("directoryServiceId");
 		
-		List<String> groupNames = new ArrayList<String>();
+		List<IData> groups = new ArrayList<IData>();
 		
 		IDirectorySession session = CDSUserManager.getSession();
-		for (IDirectoryService directoryService : session.listDirectoryServices()){
-			IDirectoryPagingCookie pgCookie = session.createPagingCookie(directoryService.getID());
+		if (directoryServiceId != null && !directoryServiceId.isEmpty()){
+			IDirectoryPagingCookie pgCookie = session.createPagingCookie(directoryServiceId);
 			pgCookie.setPageSize(-1);
-			List<IDirectoryPrincipal> results = session.searchDirectory(directoryService.getID(), IDirectoryPrincipal.TYPE_GROUP, new DirectorySearchQuery(searchString, 200, null), pgCookie);
+			List<IDirectoryPrincipal> results = session.searchDirectory(directoryServiceId, IDirectoryPrincipal.TYPE_GROUP, new DirectorySearchQuery(searchString, 200, null), pgCookie);
 			for (IDirectoryPrincipal result : results){
-				groupNames.add(result.getName());
+				IData group = IDataFactory.create();
+				IDataMap groupMap = new IDataMap(group);
+				groupMap.put("name", result.getName());
+				groupMap.put("directoryServiceId", directoryServiceId);
+				groups.add(group);
+			}
+		}else{
+			for (IDirectoryService directoryService : session.listDirectoryServices()){
+				IDirectoryPagingCookie pgCookie = session.createPagingCookie(directoryService.getID());
+				pgCookie.setPageSize(-1);
+				List<IDirectoryPrincipal> results = session.searchDirectory(directoryService.getID(), IDirectoryPrincipal.TYPE_GROUP, new DirectorySearchQuery(searchString, 200, null), pgCookie);
+				for (IDirectoryPrincipal result : results){
+					IData group = IDataFactory.create();
+					IDataMap groupMap = new IDataMap(group);
+					groupMap.put("name", result.getName());
+					groupMap.put("directoryServiceId", directoryService.getID());
+					groups.add(group);
+				}
 			}
 		}
 		
-		pipelineMap.put("groupNames", groupNames.toArray(new String[groupNames.size()]));
+		pipelineMap.put("groups", groups.toArray(new String[groups.size()]));
 		// --- <<IS-END>> ---
 
                 

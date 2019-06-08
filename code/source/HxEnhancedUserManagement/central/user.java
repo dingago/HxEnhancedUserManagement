@@ -1,8 +1,8 @@
 package HxEnhancedUserManagement.central;
 
 // -----( IS Java Code Template v1.2
-// -----( CREATED: 2019-06-07 10:56:42 MDT
-// -----( ON-HOST: 192.168.241.213
+// -----( CREATED: 2019-06-08 09:34:21 MDT
+// -----( ON-HOST: 192.168.241.179
 
 import com.wm.data.*;
 import com.wm.util.Values;
@@ -225,21 +225,25 @@ public final class user
 		// --- <<IS-START(searchUsers)>> ---
 		// @sigtype java 3.5
 		// [i] field:0:required searchString
+		// [i] field:0:required directoryServiceId
 		// [o] record:1:required users
 		// [o] - field:0:required username
 		// [o] - field:0:required firstName
 		// [o] - field:0:required lastName
 		// [o] - field:0:optional email
+		// [o] - field:0:required directoryServiceId
 		IDataMap pipelineMap = new IDataMap(pipeline);
 		String searchString = pipelineMap.getAsString("searchString");
 		
 		List<IData> users = new ArrayList<IData>();
 		
 		IDirectorySession session = CDSUserManager.getSession();
-		for (IDirectoryService directoryService : session.listDirectoryServices()){
-			IDirectoryPagingCookie pgCookie = session.createPagingCookie(directoryService.getID());
+		String directoryServiceId = pipelineMap.getAsString("directoryServiceId");
+		
+		if (directoryServiceId != null && !directoryServiceId.isEmpty()){
+			IDirectoryPagingCookie pgCookie = session.createPagingCookie(directoryServiceId);
 			pgCookie.setPageSize(-1);
-			List<IDirectoryPrincipal> results = session.searchDirectory(directoryService.getID(), IDirectoryPrincipal.TYPE_USER, new DirectorySearchQuery(searchString, -1, null), pgCookie);
+			List<IDirectoryPrincipal> results = session.searchDirectory(directoryServiceId, IDirectoryPrincipal.TYPE_USER, new DirectorySearchQuery(searchString, -1, null), pgCookie);
 			for (IDirectoryPrincipal result : results){
 				if (result instanceof IDirectoryUser){
 					IDirectoryUser user = (IDirectoryUser)result;
@@ -251,7 +255,29 @@ public final class user
 					if (user.getEmail() != null && !user.getEmail().isEmpty()){
 						userDataMap.put("email", user.getEmail());
 					}
+					userDataMap.put("directoryServiceId", directoryServiceId);
 					users.add(userData);
+				}
+			}
+		}else{
+			for (IDirectoryService directoryService : session.listDirectoryServices()){
+				IDirectoryPagingCookie pgCookie = session.createPagingCookie(directoryService.getID());
+				pgCookie.setPageSize(-1);
+				List<IDirectoryPrincipal> results = session.searchDirectory(directoryService.getID(), IDirectoryPrincipal.TYPE_USER, new DirectorySearchQuery(searchString, -1, null), pgCookie);
+				for (IDirectoryPrincipal result : results){
+					if (result instanceof IDirectoryUser){
+						IDirectoryUser user = (IDirectoryUser)result;
+						IData userData = IDataFactory.create();
+						IDataMap userDataMap = new IDataMap(userData);
+						userDataMap.put("username", user.getName());
+						userDataMap.put("firstName", user.getFirstName());
+						userDataMap.put("lastName", user.getLastName());
+						if (user.getEmail() != null && !user.getEmail().isEmpty()){
+							userDataMap.put("email", user.getEmail());
+						}
+						userDataMap.put("directoryServiceId", directoryService.getID());
+						users.add(userData);
+					}
 				}
 			}
 		}
